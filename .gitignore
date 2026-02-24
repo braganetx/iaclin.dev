@@ -1,0 +1,7 @@
+# Regras de Negócio e Agentes de IA
+.agent/
+
+# Documentação Estratégica
+*.md
+!README.md
+*.docx
