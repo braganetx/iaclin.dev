@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IACLIN — Sua clínica atende pacientes 24h, sem contratar ninguém</title>
+  <meta name="description"
+    content="IACLIN automatiza agendamentos, confirmações e atendimento via WhatsApp com agentes de IA. Reduza faltas em 50% e aumente faturamento. Feita para clínicas médicas, odontológicas e estéticas." />
+  <meta name="keywords"
+    content="iaclin, automação clínicas, agendamento whatsapp, reduzir faltas, no-show clínica, chatbot médico, healthtech brasil" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="IACLIN — Sua clínica atende pacientes 24h" />
+  <meta property="og:description"
+    content="Agentes de IA que agendam, confirmam e reduzem faltas pelo WhatsApp. Resultado em semanas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://iaclin.dev" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563EB'/><text x='50' y='68' font-family='sans-serif' font-size='48' font-weight='900' fill='white' text-anchor='middle'>iC</text></svg>" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">iC</div>
+        IACLIN
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#problema">O Problema</a>
+        <a href="#solucao">Como Funciona</a>
+        <a href="#funcionalidades">Recursos</a>
+        <a href="#precos">Planos</a>
+        <a href="#sobre">Sobre</a>
+      </div>
+      <div class="nav-cta">
+        <a href="mailto:startup@iaclin.dev?subject=Quero uma demonstração da IACLIN"
+          class="btn btn-primary btn-sm">Agendar Demo Grátis</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO V2 — Luxury B2B Vertical Narrative ===== -->
+  <section class="hero hero-v2" id="hero">
+    <div class="container text-center">
+      <div class="hero-content">
+        <div class="hero-badge mx-auto reveal">
+          <span class="pulse-dot"></span>
+          Tecnologia Google Cloud · LGPD Nativo
+        </div>
+
+        <h1 class="reveal reveal-delay-1">
+          Você estudou mais de uma década para cuidar de vidas.<br />
+          <span class="text-blue">Como acabou se tornando refém da própria clínica?</span>
+        </h1>
+
+        <p class="hero-desc mx-auto reveal reveal-delay-2">
+          A tecnologia definitiva que devolve seu tempo e blinda sua reputação,<br />
+          <strong>sem transformar seu atendimento em um robô.</strong>
+        </p>
+
+        <div class="hero-buttons justify-center reveal reveal-delay-3">
+          <a href="mailto:startup@iaclin.dev?subject=Quero minha auditoria gratuita" class="btn btn-primary btn-lg">
+            Quero minha auditoria de agenda gratuita →
+          </a>
+          <a href="#solucao" class="btn btn-ghost">
+            Conheça o novo padrão de agendamento
+          </a>
+        </div>
+
+        <!-- Social Proof - Cialdini -->
+        <div class="hero-trust justify-center mt-4 reveal reveal-delay-4">
+          <div class="trust-avatars">
+            <div class="avatar">👨‍⚕️</div>
+            <div class="avatar">👩‍⚕️</div>
+            <div class="avatar">🩺</div>
+            <div class="avatar">🏥</div>
+            <div class="avatar">+</div>
+          </div>
+          <span>Validada com clínicas reais · Projeto de pesquisa USP/ESALQ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAIN SECTION — A Armadilha & Conflito Interno ===== -->
+  <section class="section pain-section" id="problema"
+    style="background-color: var(--slate-50); padding-top: 4rem; border-top: 1px solid var(--gray-border);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 4rem;">
+        <span class="section-label label-red reveal">⚠️ A Armadilha</span>
+        <h2 class="section-title reveal" style="max-width: 800px; margin: 0 auto;">
+          Você sabe que precisa mudar, mas o medo de colocar um <span class="highlight-underline text-blue">"robô
+            frio"</span> te paralisa.
+        </h2>
+        <p class="section-subtitle mx-auto reveal" style="margin-top: 1.5rem; max-width: 800px;">
+          Você teme perder o olho no olho. Teme uma notificação do CFM ou um processo da LGPD por usar ferramentas
+          amadoras. Então você tenta microgerenciar tudo. Conta com mais recepcionistas, que ficam sobrecarregadas. Você
+          não construiu uma clínica, construiu uma prisão. E esse medo custa caro:
+        </p>
+      </div>
+
+      <div class="pain-grid">
+        <!-- Left: Big pain statement (Loss Aversion - Kahneman) -->
+        <div class="pain-content reveal">
+          <div class="pain-stat-big">
+            R$ 15.000
+            <span>perdidos por mês em consultas vazias e equipe improdutiva</span>
+          </div>
+          <p style="margin-top: 24px;">
+            Enquanto sua equipe tenta ser humana respondendo cada mensagem manualmente, a demora no WhatsApp faz sua
+            clínica perder novos pacientes.
+          </p>
+          <p>
+            O pior: <strong>40% do tempo</strong> da sua recepção é desperdiçado em tarefas burocráticas, impedindo o
+            verdadeiro cuidado humano com quem já está ali, aguardando na sala de espera.
+          </p>
+          <p class="pain-source">Fonte: Panorama das Clínicas 2025, Doctoralia & Feegow</p>
+        </div>
+
+        <!-- Right: Pain cards -->
+        <div class="pain-cards">
+          <div class="pain-card reveal reveal-delay-1">
+            <div class="pain-icon">📉</div>
+            <h5 class="counter" data-target="32" data-suffix="%">0</h5>
+            <p>das clínicas têm taxa de no-show acima de 11%</p>
+          </div>
+          <div class="pain-card reveal reveal-delay-2">
+            <div class="pain-icon">⏰</div>
+            <h5 class="counter" data-target="40" data-suffix="%">0</h5>
+            <p>do tempo da equipe gasto com processos manuais</p>
+          </div>
+          <div class="pain-card reveal reveal-delay-3" style="grid-column: span 2;">
+            <div class="pain-icon">📱</div>
+            <h5>Caos Operacional</h5>
+            <p>Seu telefone tocando aos domingos para remarcar consultas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION — Os Parceiros de Negócio ===== -->
+  <section class="section solution-section" id="solucao">
+    <div class="container text-center">
+      <span class="section-label label-green reveal">💡 A Virada de Chave</span>
+      <h2 class="section-title reveal">
+        E se a verdadeira desumanização for deixar seu paciente<br />
+        <span class="text-blue">horas esperando no WhatsApp?</span>
+      </h2>
+      <p class="section-subtitle mx-auto reveal" style="max-width: 800px;">
+        Apresentamos a <strong>IACLIN</strong>. A Inteligência Artificial que não substitui o calor humano: ela o
+        protege.<br />
+        Conheça seus novos Parceiros de Negócio.
+      </p>
+
+      <div class="solution-steps">
+        <div class="solution-step reveal reveal-delay-1">
+          <div class="step-number">1</div>
+          <div class="icon-wrap blue">📅</div>
+          <h4>O Guardião da Sua Agenda</h4>
+          <p>
+            Enquanto você dorme, ele garante que sua manhã de segunda-feira esteja lotada e organizada. Ele responde na
+            hora, qualifica urgências e elimina buracos na agenda. Zero ociosidade, zero estresse.
+          </p>
+        </div>
+        <div class="solution-step reveal reveal-delay-2">
+          <div class="step-number">2</div>
+          <div class="icon-wrap green">🤝</div>
+          <h4>O Especialista em Fidelização</h4>
+          <p>
+            O fim da frieza. Ele lembra do retorno do paciente, manda parabéns e resgata quem sumiu, criando um vínculo
+            acolhedor e exclusivo com a sua marca.
+          </p>
+        </div>
+        <div class="solution-step reveal reveal-delay-3">
+          <div class="step-number">3</div>
+          <div class="icon-wrap slate">💰</div>
+          <h4>O Auditor de Lucratividade</h4>
+          <p>
+            Pare de deixar dinheiro na mesa. Ele monitora cada interação, faz a triagem inicial e envia confirmações que
+            reduzem as faltas (no-show) a quase zero.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AUTHORITY — Blindagem ===== -->
+  <section class="section authority-section" id="sobre" style="padding-top: 0;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 4rem;">
+        <span class="section-label label-blue reveal">🛡️ Segurança Inegociável</span>
+        <h2 class="section-title reveal" style="max-width: 800px; margin: 0 auto;">
+          Não é um "bot" de internet. É ciência validada pela <span class="text-blue">USP</span> e blindada pelo <span
+            class="text-blue">Google</span>.
+        </h2>
+        <p class="section-subtitle mx-auto reveal" style="margin-top: 1.5rem; max-width: 800px;">
+          A IACLIN foi desenhada exclusivamente para as rígidas normas de saúde do Brasil. Pode respirar fundo. É 100%
+          seguro e sua reputação está intocável.
+        </p>
+      </div>
+
+      <div class="authority-grid">
+        <div class="authority-content reveal">
+          <h3 style="margin-bottom: 2rem;">Tecnologia de Nível Global, Ética Local</h3>
+
+          <div class="authority-badges">
+            <div class="auth-badge">
+              <div class="badge-icon" style="color: var(--green-600);">✅</div>
+              <div>
+                <h5>Adequação Total ao CFM</h5>
+                <p>Não diagnostica nem prescreve. Organiza a jornada respeitando rigorosamente a ética médica.</p>
+              </div>
+            </div>
+            <div class="auth-badge">
+              <div class="badge-icon" style="color: var(--green-600);">✅</div>
+              <div>
+                <h5>LGPD Nativa e Blindada</h5>
+                <p>Dados criptografados de ponta a ponta. O paciente é dono, você é o custodiante.</p>
+              </div>
+            </div>
+            <div class="auth-badge">
+              <div class="badge-icon">🏛️</div>
+              <div>
+                <h5>MBA USP/ESALQ</h5>
+                <p>Validação de pesquisa acadêmica em negócios digitais e IA aplicada a clínicas.</p>
+              </div>
+            </div>
+            <div class="auth-badge">
+              <div class="badge-icon">☁️</div>
+              <div>
+                <h5>Google Cloud Platform</h5>
+                <p>Vertex AI, infraestrutura segura e de altíssima disponibilidade global.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="authority-visual reveal reveal-delay-2">
+          <div class="authority-card">
+            <div class="card-icon">🛡️</div>
+            <h4>Blindagem Total</h4>
+            <p class="card-sub">Tranquilidade Jurídica e Operacional</p>
+            <div class="divider"></div>
+            <p class="card-quote">
+              "A inovação só é válida quando não expõe a clínica a riscos. A IACLIN foi projetada priorizando a
+              conformidade médica acima de tudo."
+            </p>
+            <div class="divider"></div>
+            <div class="google-cloud-badge">
+              <span style="font-size: 1.1rem;">☁️</span>
+              Built on <strong>Google Cloud Platform</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section features-section" id="funcionalidades">
+    <div class="container text-center">
+      <span class="section-label label-blue reveal">🚀 Recursos</span>
+      <h2 class="section-title reveal">
+        Tudo que sua clínica precisa<br />
+        para atender melhor e <span class="text-blue">faturar mais</span>
+      </h2>
+      <p class="section-subtitle mx-auto reveal">
+        Diferente de chatbots genéricos, a IACLIN foi construída exclusivamente para o setor de saúde. Cada recurso
+        resolve uma dor real de clínicas.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon f-blue">📱</div>
+          <h4>Omnichannel Completo</h4>
+          <p>WhatsApp, Instagram, SMS e E-mail integrados em um único painel. Seus pacientes falam onde quiserem, você
+            responde de um lugar só.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon f-green">🔔</div>
+          <h4>Lembretes que Reduzem Faltas</h4>
+          <p>Confirmação automática 48h e 24h antes. Paciente não confirmou? O agente reagenda automaticamente e libera
+            o horário.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon f-slate">🧠</div>
+          <h4>IA Especializada em Saúde</h4>
+          <p>Não alucina, não dá diagnósticos. Segue regras rígidas do CFM (2.314/2022). Se não sabe, transfere para
+            humano imediatamente.</p>
+          <span class="feature-tag">Google Vertex AI</span>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon f-amber">📊</div>
+          <h4>Dashboard com Métricas Reais</h4>
+          <p>Veja em tempo real: taxa de no-show, agendamentos confirmados, NPS, ARPU e conversão — dados que mudam a
+            gestão da sua clínica.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon f-red">🛡️</div>
+          <h4>LGPD de Verdade</h4>
+          <p>Criptografia AES-256, auditoria completa, consentimento gerenciado. Não é checklist — é compliance nativo
+            na arquitetura.</p>
+          <span class="feature-tag green-tag">Compliance Nativo</span>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon f-blue">🎨</div>
+          <h4>A Cara da Sua Clínica</h4>
+          <p>Cada clínica tem tom, vocabulário e personalidade customizados. Um consultório pediátrico fala diferente de
+            uma clínica de estética.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROI SECTION — Loss Aversion + Anchoring ===== -->
+  <section class="section roi-section">
+    <div class="container">
+      <div class="roi-grid">
+        <div class="roi-content reveal">
+          <h2>
+            Quanto custa <strong>não</strong> ter a IACLIN?
+          </h2>
+          <p>
+            Uma clínica com 5 médicos e 15% de no-show perde, em média,
+            <strong>R$180.000 por ano</strong> em consultas vazias.
+          </p>
+          <p>
+            Com a IACLIN, você recupera metade disso no primeiro mês.
+            O investimento se paga em <strong>semanas</strong>, não meses.
+          </p>
+          <div class="roi-highlight">
+            R$ 90.000+/ano <span
+              style="font-size: 1rem; font-weight: 600; color: rgba(255,255,255,0.7); display: block;">recuperados em
+              faturamento com redução de faltas</span>
+          </div>
+        </div>
+
+        <div class="roi-cards reveal reveal-delay-2">
+          <div class="roi-card">
+            <h4>-50%</h4>
+            <p>Redução de faltas</p>
+          </div>
+          <div class="roi-card">
+            <h4>+40%</h4>
+            <p>Mais agendamentos</p>
+          </div>
+          <div class="roi-card">
+            <h4>24/7</h4>
+            <p>Atendimento contínuo</p>
+          </div>
+          <div class="roi-card">
+            <h4>30s</h4>
+            <p>Tempo de resposta</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING — O Fechamento ===== -->
+  <section class="section pricing-section" id="precos">
+    <div class="container text-center">
+      <span class="section-label label-blue reveal">⏳ Liberdade</span>
+      <h2 class="section-title reveal">
+        Quanto vale ter os seus <span class="highlight-underline text-blue">domingos de volta?</span>
+      </h2>
+      <p class="section-subtitle mx-auto reveal" style="max-width: 800px;">
+        Chegou o momento de decidir: continuar apagando incêndios operacionais e colocando sua saúde mental em risco, ou
+        assumir o controle da sua clínica. Nós não oferecemos "planos de software". Oferecemos níveis de escala para a
+        sua operação.
+      </p>
+
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card reveal reveal-delay-1">
+          <h4>Starter</h4>
+          <p class="pricing-desc">Consultórios individuais</p>
+          <div class="price-row">
+            <span class="currency">R$</span>
+            <span class="amount">497</span>
+            <span class="period">/mês</span>
+          </div>
+          <p class="setup-text">Implantação: R$ 990 (única)</p>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> 1 WhatsApp conectado</li>
+            <li><span class="check">✓</span> Até 300 pacientes/mês</li>
+            <li><span class="check">✓</span> 3 usuários</li>
+            <li><span class="check">✓</span> Agendamento + Lembretes IA</li>
+            <li><span class="check">✓</span> Analytics básico</li>
+            <li><span class="check">✓</span> Suporte por email (48h)</li>
+          </ul>
+          <a href="mailto:startup@iaclin.dev?subject=Demo Starter" class="btn btn-outline">Quero minha auditoria
+            gratuita</a>
+        </div>
+
+        <!-- Professional (Decoy + Anchoring) -->
+        <div class="pricing-card featured reveal reveal-delay-2">
+          <h4>Professional</h4>
+          <p class="pricing-desc">Clínicas médias (3–10 profissionais)</p>
+          <div class="price-row">
+            <span class="currency">R$</span>
+            <span class="amount">1.497</span>
+            <span class="period">/mês</span>
+          </div>
+          <p class="setup-text">Implantação: R$ 2.490 (única)</p>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> 3 WhatsApps conectados</li>
+            <li><span class="check">✓</span> Até 1.500 pacientes/mês</li>
+            <li><span class="check">✓</span> 10 usuários</li>
+            <li><span class="check">✓</span> Todos os 3 agentes de IA</li>
+            <li><span class="check">✓</span> CRM + Faturamento IA</li>
+            <li><span class="check">✓</span> Analytics avançado + NPS</li>
+            <li><span class="check">✓</span> Identidade personalizada</li>
+            <li><span class="check">✓</span> Suporte WhatsApp (12h)</li>
+          </ul>
+          <a href="mailto:startup@iaclin.dev?subject=Demo Professional" class="btn btn-primary">Escolher Plano e Ter
+            Meus Domingos de Volta</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card reveal reveal-delay-3">
+          <h4>Enterprise</h4>
+          <p class="pricing-desc">Redes, hospitais e franquias</p>
+          <div class="price-row">
+            <span class="currency">R$</span>
+            <span class="amount">4.970</span>
+            <span class="period">/mês</span>
+          </div>
+          <p class="setup-text">Implantação dedicada (sob consulta)</p>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> WhatsApps ilimitados</li>
+            <li><span class="check">✓</span> Pacientes ilimitados</li>
+            <li><span class="check">✓</span> Usuários ilimitados</li>
+            <li><span class="check">✓</span> White-label completo</li>
+            <li><span class="check">✓</span> Integrações custom (API)</li>
+            <li><span class="check">✓</span> SLA dedicado (4h)</li>
+            <li><span class="check">✓</span> Treinamento presencial</li>
+          </ul>
+          <a href="mailto:startup@iaclin.dev?subject=Demo Enterprise" class="btn btn-outline">Falar com Vendas</a>
+        </div>
+      </div>
+
+      <!-- Fim dos cards de planos -->
+    </div>
+  </section>
+
+  <!-- ===== AUTHORITY SEÇÃO MOVIDA PARA DEPOIS DE SOLUÇÕES ===== -->
+
+  <!-- ===== CTA — O Convite Definitivo ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="reveal">
+        Deixe a IACLIN trabalhar nos bastidores<br />
+        <span class="text-blue">enquanto você brilha no consultório.</span>
+      </h2>
+      <p class="reveal" style="max-width: 600px; margin: 1.5rem auto;">
+        Descubra como nossa inteligência pode blindar sua paz de espírito e transformar o atendimento da sua clínica.
+      </p>
+      <div class="cta-buttons reveal">
+        <a href="mailto:startup@iaclin.dev?subject=Quero minha auditoria de agenda gratuita"
+          class="btn btn-primary btn-lg">
+          Quero minha auditoria de agenda gratuita →
+        </a>
+        <a href="#funcionalidades" class="btn btn-outline">
+          Ver Todos os Recursos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-icon">iC</div>
+            IACLIN
+          </a>
+          <p>
+            Plataforma de Automação Inteligente para Clínicas.
+            Agentes de IA que transformam o atendimento ao paciente.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Produto</h5>
+          <a href="#funcionalidades">Recursos</a>
+          <a href="#precos">Planos</a>
+          <a href="#solucao">Como Funciona</a>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <a href="#sobre">Sobre</a>
+          <a href="mailto:startup@iaclin.dev">Contato</a>
+          <a href="#"
+            onclick="alert('Área de Blog será lançada em breve juntamente com o produto oficial.'); return false;">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <a href="#" class="btn-modal" data-modal="modal-privacidade">Privacidade</a>
+          <a href="#" class="btn-modal" data-modal="modal-termos">Termos de Uso</a>
+          <a href="#" class="btn-modal" data-modal="modal-lgpd">LGPD</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 IACLIN. Todos os direitos reservados.</span>
+        <span>Feito com ❤️ no Brasil · Powered by Google Cloud</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODALS ===== -->
+  <!-- Modal Privacidade -->
+  <div class="modal" id="modal-privacidade" role="dialog" aria-modal="true" aria-labelledby="modal-privacidade-title">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Fechar">&times;</button>
+      <h3 id="modal-privacidade-title">Política de Privacidade</h3>
+      <div class="modal-body">
+        <p>A IACLIN valoriza e respeita a sua privacidade. Esta Política descreve como suas informações são tratadas
+          quando você utiliza nossa plataforma e nossos agentes de IA.</p>
+        <h4>1. Coleta de Dados</h4>
+        <p>A IACLIN atua estritamente na função de processadora de dados das clínicas parceiras. Coletamos apenas os
+          dados essenciais de agendamento (nome, número de telefone, especialidade desejada e histórico de marcações).
+        </p>
+        <h4>2. Uso da Informação</h4>
+        <p>Os dados processados pelas nossas IAs no Vertex AI são utilizados exclusivamente para as funcionalidades
+          contratadas pela clínica (agendamento, roteamento de CRM e lembretes de retenção). Zero dados são utilizados
+          para treinar as IAs públicas do Google ou nossas IAs internas sem consentimento descaracterizado da clínica
+          contratante.</p>
+        <h4>3. Compartilhamento</h4>
+        <p>A IACLIN não vende nem aluga informações coletadas para terceiros.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Termos de Uso -->
+  <div class="modal" id="modal-termos" role="dialog" aria-modal="true" aria-labelledby="modal-termos-title">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Fechar">&times;</button>
+      <h3 id="modal-termos-title">Termos de Uso</h3>
+      <div class="modal-body">
+        <p>Bem-vindo à IACLIN. Ao utilizar a nossa demonstração e, futuramente, nossos serviços produtivos, você
+          concorda em cumprir e sujeitar-se a estes Termos de Uso.</p>
+        <h4>1. Uso do Serviço</h4>
+        <p>A plataforma IACLIN é projetada para atuar em parceria com clínicas de saúde via integração com software de
+          prontuário eletrônico. A clínica é a única responsável pelas informações contidas em sua agenda médica.</p>
+        <h4>2. Limites da Inteligência Artificial</h4>
+        <p>Os Agentes não estão autorizados em hipótese alguma a fornecer diagnósticos remotos (telemedicina), fazer
+          prescrições, emitir guias, ou lidar com atendimento de Urgência/Emergência (onde a ligação com o SAMU 192
+          sempre será ativada). O Agente se restringe a rotinas administrativas ditadas pelo Conselho Federal de
+          Medicina.</p>
+        <h4>3. Prazo e Rescisão</h4>
+        <p>Para o período de testes garantimos a isenção irrestrita de fideliade. Nos planos pós-trial vigora a rescisão
+          no ciclo atual de faturamento, vide contrato principal.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal LGPD -->
+  <div class="modal" id="modal-lgpd" role="dialog" aria-modal="true" aria-labelledby="modal-lgpd-title">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Fechar">&times;</button>
+      <h3 id="modal-lgpd-title">Conformidade com a LGPD</h3>
+      <div class="modal-body">
+        <p>Nossa fundação foi desenhada tendo o Regulamento e a Lei Geral de Proteção de Dados (Lei nº 13.709/2018) como
+          base ("Privacy by Design").</p>
+        <h4>1. Consentimento</h4>
+        <p>Toda interação do agente pelo canal de mensagens exigirá o consentimento explícito e auditável do paciente
+          (Opt-In). O Opt-Out é facilitado a qualquer instante mediante solicitação no próprio canal (WhatsApp) ou
+          através da clínica.</p>
+        <h4>2. Criptografia</h4>
+        <p>Contamos com a infraestrutura da nuvem do Google GCP e os dados transacionais de saúde (considerados dados
+          sensíveis por lei) são armazenados em buckets criptografados através do algoritmo AES-256 (tanto em trânsito
+          TLS, quanto at rest).</p>
+        <h4>3. Solicitações Titulares</h4>
+        <p>Os pacientes atendidos têm acesso facilitado ao requerimento de portabilidade dos dados, remoção e
+          retificação, através da canalização do DPO (Data Protection Officer) do projeto.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
