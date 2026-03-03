@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IACLIN App — Acesso à Plataforma</title>
+    <meta name="description" content="Acesse a plataforma IACLIN de gestão inteligente para clínicas médicas." />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563EB'/><text x='50' y='68' font-family='sans-serif' font-size='48' font-weight='900' fill='white' text-anchor='middle'>iC</text></svg>" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #1e293b;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #2563eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 0.8rem;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            padding: 3rem 2.5rem;
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .beta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+            border-radius: 999px;
+            padding: 0.3rem 0.9rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background: #2563eb;
+            border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.35rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: #1e293b;
+            background: #f8fafc;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            background: white;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 0.9rem;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .btn-secondary {
+            width: 100%;
+            padding: 0.9rem;
+            background: white;
+            color: #374151;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .beta-note {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            color: #166534;
+            line-height: 1.5;
+        }
+
+        .footer-note {
+            margin-top: 1.5rem;
+            font-size: 0.78rem;
+            color: #94a3b8;
+        }
+
+        .footer-note a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            border-top: 1px solid #e2e8f0;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="app-nav">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">iC</div>
+            IACLIN
+        </a>
+        <a href="index.html" style="font-size: 0.85rem; color: #64748b; text-decoration: none;">← Voltar ao site</a>
+    </nav>
+
+    <main class="main">
+        <div class="card">
+            <div class="beta-badge">
+                <div class="pulse"></div>
+                Programa Beta — Vagas Abertas
+            </div>
+
+            <h1>Acesse a Plataforma</h1>
+            <p class="subtitle">
+                A IACLIN está em fase beta fechada.<br />
+                Entre com seu e-mail cadastrado ou solicite acesso abaixo.
+            </p>
+
+            <form action="https://formsubmit.co/startup@iaclin.dev" method="POST">
+                <input type="hidden" name="_subject" value="[IACLIN App] Tentativa de acesso" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://iaclin.dev/app.html#aguardando" />
+
+                <div class="form-group">
+                    <label for="email">E-mail cadastrado</label>
+                    <input type="email" id="email" name="email" placeholder="dr@suaclinica.com.br" required />
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="_ignore_password" placeholder="••••••••" />
+                </div>
+                <button type="submit" class="btn-primary">Entrar na Plataforma →</button>
+            </form>
+
+            <div class="divider">ou</div>
+
+            <a href="index.html#waitlist" class="btn-secondary">
+                Solicitar acesso beta →
+            </a>
+
+            <div class="beta-note">
+                ✅ <strong>Você está na fila?</strong> Nossa equipe entrará em contato em até 48h após a validação da sua
+                clínica para liberar o acesso.
+            </div>
+
+            <p class="footer-note">
+                Dúvidas? <a href="mailto:startup@iaclin.dev">startup@iaclin.dev</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 IACLIN · Aparecida de Goiânia, GO · Brasil &nbsp;|&nbsp;
+        Powered by <a href="https://cloud.google.com" style="color: #2563eb;" target="_blank" rel="noopener">Google
+            Cloud</a>
+    </footer>
+
+</body>
+
+</html>

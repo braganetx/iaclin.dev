@@ -4,18 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IACLIN — Sua clínica atende pacientes 24h, sem contratar ninguém</title>
+  <title>IACLIN — Plataforma de IA para Gestão de Clínicas | SaaS Healthtech</title>
   <meta name="description"
-    content="IACLIN automatiza agendamentos, confirmações e atendimento via WhatsApp com agentes de IA. Reduza faltas em 50% e aumente faturamento. Feita para clínicas médicas, odontológicas e estéticas." />
+    content="IACLIN é uma plataforma SaaS de agentes de IA para clínicas médicas. Automatiza agendamentos, confirmações e atendimento via WhatsApp. Reduza faltas em 50%. Cadastre-se para acesso beta." />
   <meta name="keywords"
-    content="iaclin, automação clínicas, agendamento whatsapp, reduzir faltas, no-show clínica, chatbot médico, healthtech brasil" />
+    content="iaclin, saas clinicas, plataforma ia saude, automação clínicas, agendamento whatsapp, reduzir faltas, no-show clínica, chatbot médico, healthtech brasil, google cloud vertex ai" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="IACLIN — Sua clínica atende pacientes 24h" />
+  <meta property="og:title" content="IACLIN — Plataforma SaaS de IA para Clínicas" />
   <meta property="og:description"
-    content="Agentes de IA que agendam, confirmam e reduzem faltas pelo WhatsApp. Resultado em semanas." />
+    content="Agentes de IA que agendam, confirmam e reduzem faltas pelo WhatsApp. Acesso beta disponível." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://iaclin.dev" />
+
+  <!-- Schema.org SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "IACLIN",
+    "url": "https://iaclin.dev",
+    "description": "Plataforma SaaS de agentes de IA para gestão de clínicas médicas. Automatiza agendamentos, confirmações e atendimento via WhatsApp, reduzindo no-show em até 50%.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": [
+      { "@type": "Offer", "name": "Starter", "price": "497", "priceCurrency": "BRL", "billingDuration": "P1M" },
+      { "@type": "Offer", "name": "Professional", "price": "1497", "priceCurrency": "BRL", "billingDuration": "P1M" },
+      { "@type": "Offer", "name": "Enterprise", "price": "4970", "priceCurrency": "BRL", "billingDuration": "P1M" }
+    ],
+    "creator": {
+      "@type": "Organization",
+      "name": "IACLIN",
+      "url": "https://iaclin.dev",
+      "email": "startup@iaclin.dev",
+      "address": { "@type": "PostalAddress", "addressLocality": "Aparecida de Goiânia", "addressRegion": "GO", "addressCountry": "BR" },
+      "founder": { "@type": "Person", "name": "Adão de J. Braga", "url": "https://oadao.me" }
+    }
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml"
@@ -40,9 +66,11 @@
         <a href="#precos">Planos</a>
         <a href="#sobre">Sobre</a>
       </div>
-      <div class="nav-cta">
-        <a href="mailto:startup@iaclin.dev?subject=Quero uma demonstração da IACLIN"
-          class="btn btn-primary btn-sm">Agendar Demo Grátis</a>
+      <div class="nav-cta" style="display: flex; gap: 0.5rem; align-items: center;">
+        <a href="app.html" target="_blank"
+          style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding: 0.4rem 0.8rem; border: 1px solid var(--gray-border); border-radius: 6px;">Entrar
+          →</a>
+        <a href="#waitlist" class="btn btn-primary btn-sm">Acesso Beta Gratuito</a>
       </div>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -71,8 +99,8 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="mailto:startup@iaclin.dev?subject=Quero minha auditoria gratuita" class="btn btn-primary btn-lg">
-              Quero minha auditoria de agenda gratuita →
+            <a href="#waitlist" class="btn btn-primary btn-lg">
+              Solicitar Acesso Beta Gratuito →
             </a>
             <a href="#solucao" class="btn btn-ghost">
               Ver a IACLIN em ação
@@ -531,8 +559,7 @@
             <li><span class="check">✓</span> Analytics básico</li>
             <li><span class="check">✓</span> Suporte por email (48h)</li>
           </ul>
-          <a href="mailto:startup@iaclin.dev?subject=Demo Starter" class="btn btn-outline">Quero minha auditoria
-            gratuita</a>
+          <a href="#waitlist" class="btn btn-outline">Solicitar Acesso Starter</a>
         </div>
 
         <!-- Professional (Decoy + Anchoring) -->
@@ -555,8 +582,7 @@
             <li><span class="check">✓</span> Identidade personalizada</li>
             <li><span class="check">✓</span> Suporte WhatsApp (12h)</li>
           </ul>
-          <a href="mailto:startup@iaclin.dev?subject=Demo Professional" class="btn btn-primary">Escolher Plano e Ter
-            Meus Domingos de Volta</a>
+          <a href="#waitlist" class="btn btn-primary">Solicitar Acesso Professional</a>
         </div>
 
         <!-- Enterprise -->
@@ -578,7 +604,7 @@
             <li><span class="check">✓</span> SLA dedicado (4h)</li>
             <li><span class="check">✓</span> Treinamento presencial</li>
           </ul>
-          <a href="mailto:startup@iaclin.dev?subject=Demo Enterprise" class="btn btn-outline">Falar com Vendas</a>
+          <a href="#waitlist" class="btn btn-outline">Solicitar Proposta Enterprise</a>
         </div>
       </div>
 
@@ -588,7 +614,102 @@
 
   <!-- ===== AUTHORITY SEÇÃO MOVIDA PARA DEPOIS DE SOLUÇÕES ===== -->
 
-  <!-- ===== CTA — O Convite Definitivo ===== -->
+  <!-- ===== WAITLIST / CADASTRO BETA ===== -->
+  <section class="section" id="waitlist"
+    style="background: linear-gradient(135deg, #1e3a5f 0%, #0f2340 100%); color: white;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="section-label"
+          style="background: rgba(255,255,255,0.15); color: white; border-color: rgba(255,255,255,0.2);">🚀 Acesso
+          Beta</span>
+        <h2 class="section-title reveal" style="color: white; margin-top: 1rem;">
+          Garanta seu acesso <span style="color: #60a5fa;">antecipado</span> à plataforma
+        </h2>
+        <p style="color: rgba(255,255,255,0.75); max-width: 580px; margin: 1rem auto 0;">
+          Estamos selecionando as primeiras clínicas parceiras para o programa beta da IACLIN.
+          Vagas limitadas — preencha o formulário e entre na lista prioritária.
+        </p>
+      </div>
+
+      <div style="max-width: 560px; margin: 0 auto;">
+        <form action="https://formsubmit.co/startup@iaclin.dev" method="POST"
+          style="display: flex; flex-direction: column; gap: 1rem;" id="waitlist-form">
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_subject" value="[IACLIN Beta] Nova solicitação de acesso" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://iaclin.dev/#obrigado" />
+          <input type="hidden" name="_template" value="table" />
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label
+                style="display: block; font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.4rem;">Nome
+                completo *</label>
+              <input type="text" name="nome" required placeholder="Dr. Carlos Silva"
+                style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: 0.95rem; box-sizing: border-box;" />
+            </div>
+            <div>
+              <label
+                style="display: block; font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.4rem;">E-mail
+                profissional *</label>
+              <input type="email" name="email" required placeholder="dr@clinica.com.br"
+                style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: 0.95rem; box-sizing: border-box;" />
+            </div>
+          </div>
+
+          <div>
+            <label
+              style="display: block; font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.4rem;">Nome
+              da clínica *</label>
+            <input type="text" name="clinica" required placeholder="Clínica Saúde & Vida"
+              style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: 0.95rem; box-sizing: border-box;" />
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label
+                style="display: block; font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.4rem;">Especialidade</label>
+              <select name="especialidade"
+                style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(30,58,95,0.9); color: white; font-size: 0.95rem; box-sizing: border-box;">
+                <option value="">Selecione...</option>
+                <option>Clínica Médica Geral</option>
+                <option>Odontologia</option>
+                <option>Dermatologia</option>
+                <option>Estética / Cosmética</option>
+                <option>Fisioterapia</option>
+                <option>Psicologia / Psiquiatria</option>
+                <option>Outra especialidade</option>
+              </select>
+            </div>
+            <div>
+              <label
+                style="display: block; font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.4rem;">Nº
+                de médicos/profissionais</label>
+              <select name="tamanho"
+                style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(30,58,95,0.9); color: white; font-size: 0.95rem; box-sizing: border-box;">
+                <option>1 (consultório solo)</option>
+                <option>2–5 profissionais</option>
+                <option>6–15 profissionais</option>
+                <option>16+ / rede</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit"
+            style="padding: 1rem 2rem; background: #2563eb; color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 0.5rem; transition: background 0.2s;"
+            onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">
+            Quero Acesso Beta Prioritário →
+          </button>
+
+          <p style="text-align: center; font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0;">
+            🔒 Seus dados estão seguros. Sem spam. Você pode cancelar a qualquer momento.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
   <section class="cta-section">
     <div class="container">
       <h2 class="reveal">
