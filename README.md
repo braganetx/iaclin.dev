@@ -1,36 +1,21 @@
-<p align="center">
-  <strong>iC</strong>
-</p>
+<p align="center"> <strong>iC</strong> </p> <h1 align="center">IACLIN — Intelligent Automation Platform for Clinics</h1> <p align="center"> <em>AI-powered patient communication for medical, dental, and aesthetic clinics.</em> </p> <p align="center"> <a href="https://iaclin.dev">🌐 Visit Website</a> </p>
+About the Project
+IACLIN is a SaaS platform that uses AI agents to automate patient communication for clinics.
 
-<h1 align="center">IACLIN — Plataforma de Automação Inteligente para Clínicas</h1>
+Unlike generic chatbots, IACLIN was designed specifically for the healthcare workflow, with a focus on operational efficiency, patient engagement, and a white-label experience for clinics.
 
-<p align="center">
-  <em>IA conversacional feita exclusivamente para clínicas médicas, odontológicas e estéticas no Brasil.</em>
-</p>
+What the system does
+Automates appointment scheduling through WhatsApp using natural, clinic-friendly language.
 
-<p align="center">
-  <a href="https://iaclin.dev">🌐 Acessar Website</a>
-</p>
+Sends automatic confirmations and reminders to help reduce no-shows.
 
----
+Performs initial triage and routes urgent cases to the human team.
 
-## 📋 Sobre o Projeto
+Helps reactivate inactive patients and supports follow-up and return-visit workflows.
 
-A **IACLIN** é uma plataforma SaaS de atendimento inteligente que utiliza agentes de IA para automatizar a comunicação entre clínicas médicas e seus pacientes. 
+Project Status
+This repository contains the public presentation site (landing page) for the project. The core application source code, including APIs, AI agents, vector database, and dashboard, is hosted in private repositories for security and intellectual property reasons.
 
-Diferente de chatbots genéricos, a IACLIN foi projetada com foco **100% no setor de saúde**, com compliance nativo para **LGPD** e diretrizes do **Conselho Federal de Medicina**, operando de forma white-label integrada à operação da clínica.
+Public landing page only. Core system private.
 
-### O que o sistema faz:
-- Automatiza **agendamentos** via WhatsApp com linguagem natural clinicamente adaptada.
-- Realiza **confirmações e lembretes** automáticos para reduzir o índice de no-show (faltas).
-- Faz a **triagem** inicial de urgência e direciona atendimentos críticos para a equipe humana.
-- Atua de forma **proativa** para reativar pacientes inativos e realizar chamados de retorno/revisão.
-
----
-
-## 🔒 Status do Projeto
-
-Este repositório contém a página de apresentação pública (Landing Page) do projeto. O código-fonte principal da aplicação (APIs, agentes de IA, banco de dados vetorial e dashboard) está hospedado em repositórios privados por questões de segurança e propriedade intelectual.
-
-Projeto fechado. Todos os direitos reservados © 2026 IACLIN.
-Desenvolvido com tecnologia Google Cloud.
+Developed with Google Cloud infrastructure.
