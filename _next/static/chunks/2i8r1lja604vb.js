@@ -1,0 +1,92 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,16327,e=>{"use strict";let t=(0,e.i(56420).default)("chevron-down",[["path",{d:"m6 9 6 6 6-6",key:"qrunsl"}]]);e.s(["ChevronDown",0,t],16327)},26091,e=>{"use strict";let t=(0,e.i(56420).default)("file-text",[["path",{d:"M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z",key:"1oefj6"}],["path",{d:"M14 2v5a1 1 0 0 0 1 1h5",key:"wfsgrz"}],["path",{d:"M10 9H8",key:"b1mrlr"}],["path",{d:"M16 13H8",key:"t4e002"}],["path",{d:"M16 17H8",key:"z1uh3a"}]]);e.s(["FileText",0,t],26091)},63142,e=>{"use strict";var t=e.i(43476),r=e.i(71645),a=e.i(26091),s=e.i(56420);let o=(0,s.default)("printer",[["path",{d:"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2",key:"143wyd"}],["path",{d:"M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6",key:"1itne7"}],["rect",{x:"6",y:"14",width:"12",height:"8",rx:"1",key:"1ue0tg"}]]);var l=e.i(46387);let d=(0,s.default)("trending-up",[["path",{d:"M16 7h6v6",key:"box55l"}],["path",{d:"m22 7-8.5 8.5-5-5L2 17",key:"1t1m79"}]]);var i=e.i(63676);e.s(["ExecutiveReportModal",0,function({prospects:e,title:s="Relatório Executivo de Inteligência B2B"}){let[n,c]=(0,r.useState)(!1),x=e.length,p=e.filter(e=>["qualificado","demo_agendada","proposta_enviada","fechado"].includes(e.status||"")).length,m=e.filter(e=>e.temPixelMeta||e.tem_pixel_meta).length,b=x>0?Math.round(e.reduce((e,t)=>e+(t.scoreOportunidade||t.lead_score||0),0)/x):0,h={novo:0,abordado:0,respondeu:0,qualificado:0,demo_agendada:0,proposta_enviada:0,fechado:0,perdido:0};return e.forEach(e=>{let t=e.status||"novo";void 0!==h[t]?h[t]++:h.novo++}),(0,t.jsxs)(t.Fragment,{children:[(0,t.jsxs)("button",{onClick:()=>c(!0),type:"button",className:"flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white border border-purple-400/30 shadow-lg transition cursor-pointer no-print",children:[(0,t.jsx)(a.FileText,{size:16}),(0,t.jsx)("span",{children:"📄 Gerar Relatório PDF Executivo"})]}),n&&(0,t.jsx)("div",{className:"fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto",children:(0,t.jsxs)("div",{className:"bg-slate-900 border border-white/20 rounded-2xl w-full max-w-5xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden",children:[(0,t.jsxs)("div",{className:"p-4 border-b border-white/10 flex items-center justify-between bg-slate-950 no-print",children:[(0,t.jsxs)("div",{className:"flex items-center gap-2",children:[(0,t.jsx)(o,{size:20,className:"text-purple-400"}),(0,t.jsx)("h3",{className:"font-bold text-white text-base",children:"Pré-visualização do Relatório PDF Executivo"})]}),(0,t.jsxs)("div",{className:"flex items-center gap-3",children:[(0,t.jsxs)("button",{onClick:()=>{let e=document.querySelector(".printable-report-sheet");if(!e)return void window.print();let t=window.open("","_blank","width=1100,height=850");t?(t.document.write(`
+      <!DOCTYPE html>
+      <html lang="pt-BR">
+        <head>
+          <meta charset="utf-8" />
+          <title>${s}</title>
+          <style>
+            @page {
+              size: A4 portrait;
+              margin: 1cm;
+            }
+            body {
+              background-color: #ffffff !important;
+              color: #0f172a !important;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              margin: 0;
+              padding: 15px;
+              font-size: 10pt;
+            }
+            .grid { display: grid; }
+            .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .gap-4 { gap: 1rem; }
+            .mb-6 { margin-bottom: 1.5rem; }
+            .mt-8 { margin-top: 2rem; }
+            .pt-4 { padding-top: 1rem; }
+            .pb-4 { padding-bottom: 1rem; }
+            .p-4 { padding: 1rem; }
+            .p-2 { padding: 0.5rem; }
+            .p-2.5 { padding: 0.625rem; }
+            .rounded-xl { border-radius: 0.75rem; }
+            .rounded { border-radius: 0.25rem; }
+            .border { border: 1px solid #cbd5e1; }
+            .border-b { border-bottom: 1px solid #cbd5e1; }
+            .border-b-2 { border-bottom: 2px solid #0f172a; }
+            .border-t { border-top: 1px solid #cbd5e1; }
+            .border-r { border-right: 1px solid #cbd5e1; }
+            .bg-slate-50 { background-color: #f8fafc; }
+            .bg-emerald-50 { background-color: #ecfdf5; }
+            .bg-blue-50 { background-color: #eff6ff; }
+            .bg-purple-50 { background-color: #faf5ff; }
+            .bg-slate-100 { background-color: #f1f5f9; }
+            .bg-purple-100 { background-color: #f3e8ff; }
+            .bg-slate-200 { background-color: #e2e8f0; }
+            .text-slate-900 { color: #0f172a; }
+            .text-slate-800 { color: #1e293b; }
+            .text-slate-700 { color: #334155; }
+            .text-slate-600 { color: #475569; }
+            .text-slate-500 { color: #64748b; }
+            .text-emerald-700 { color: #047857; }
+            .text-emerald-800 { color: #065f46; }
+            .text-emerald-600 { color: #059669; }
+            .text-blue-700 { color: #1d4ed8; }
+            .text-blue-800 { color: #1e40af; }
+            .text-blue-600 { color: #2563eb; }
+            .text-purple-700 { color: #6b21a8; }
+            .text-purple-800 { color: #581c87; }
+            .text-purple-600 { color: #9333ea; }
+            .flex { display: flex; }
+            .items-center { align-items: center; }
+            .justify-between { justify-content: space-between; }
+            .gap-2 { gap: 0.5rem; }
+            .font-bold { font-weight: 700; }
+            .font-extrabold { font-weight: 800; }
+            .font-semibold { font-weight: 600; }
+            .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+            .text-xs { font-size: 0.75rem; line-height: 1rem; }
+            .text-[10px] { font-size: 10px; }
+            .text-[11px] { font-size: 11px; }
+            .text-center { text-align: center; }
+            .text-right { text-align: right; }
+            .uppercase { text-transform: uppercase; }
+            .w-full { width: 100%; }
+            table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+            th, td { border: 1px solid #cbd5e1; padding: 6px; }
+            th { background-color: #f1f5f9; text-align: left; font-weight: 700; }
+            svg { display: inline-block; vertical-align: middle; }
+          </style>
+        </head>
+        <body>
+          ${e.innerHTML}
+        </body>
+      </html>
+    `),t.document.close(),t.focus(),setTimeout(()=>{t.print(),t.close()},250)):window.print()},className:"px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-2 shadow-lg cursor-pointer",children:[(0,t.jsx)(o,{size:15}),(0,t.jsx)("span",{children:"Imprimir / Salvar PDF"})]}),(0,t.jsx)("button",{onClick:()=>c(!1),className:"p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-white/10",children:(0,t.jsx)(i.X,{size:20})})]})]}),(0,t.jsxs)("div",{className:"printable-report-sheet p-8 overflow-y-auto bg-white text-slate-900 font-sans print:p-0 print:overflow-visible print:bg-white print:text-black",children:[(0,t.jsxs)("div",{className:"flex items-center justify-between border-b-2 border-slate-900 pb-4 mb-6",children:[(0,t.jsxs)("div",{children:[(0,t.jsxs)("div",{className:"flex items-center gap-2",children:[(0,t.jsx)(l.Building2,{className:"text-purple-700",size:28}),(0,t.jsx)("span",{className:"font-extrabold text-2xl tracking-tight text-slate-900",children:"ProspectorAI"}),(0,t.jsx)("span",{className:"text-xs px-2 py-0.5 rounded bg-purple-100 text-purple-800 font-bold border border-purple-300",children:"Relatório Comercial"})]}),(0,t.jsx)("h1",{className:"text-xl font-bold text-slate-800 mt-1",children:s})]}),(0,t.jsxs)("div",{className:"text-right text-xs text-slate-600 space-y-1 font-mono",children:[(0,t.jsxs)("p",{children:[(0,t.jsx)("strong",{children:"Emissão:"})," ",new Date().toLocaleDateString("pt-BR")," às ",new Date().toLocaleTimeString("pt-BR")]}),(0,t.jsxs)("p",{children:[(0,t.jsx)("strong",{children:"Escopo:"})," Pipeline Comercial B2B"]}),(0,t.jsxs)("p",{children:[(0,t.jsx)("strong",{children:"Status:"})," ",x," Registros Analisados"]})]})]}),(0,t.jsxs)("div",{className:"grid grid-cols-4 gap-4 mb-6",children:[(0,t.jsxs)("div",{className:"p-4 rounded-xl bg-slate-50 border border-slate-200",children:[(0,t.jsx)("span",{className:"text-xs font-semibold text-slate-500 block uppercase",children:"Total de Leads"}),(0,t.jsx)("span",{className:"text-2xl font-extrabold text-slate-900",children:x}),(0,t.jsx)("span",{className:"text-[10px] text-slate-500 block mt-1",children:"Mapeados via Google Maps"})]}),(0,t.jsxs)("div",{className:"p-4 rounded-xl bg-emerald-50 border border-emerald-200",children:[(0,t.jsx)("span",{className:"text-xs font-semibold text-emerald-700 block uppercase",children:"Leads Qualificados"}),(0,t.jsx)("span",{className:"text-2xl font-extrabold text-emerald-800",children:p}),(0,t.jsxs)("span",{className:"text-[10px] text-emerald-600 block mt-1",children:[x>0?Math.round(p/x*100):0,"% da base"]})]}),(0,t.jsxs)("div",{className:"p-4 rounded-xl bg-blue-50 border border-blue-200",children:[(0,t.jsx)("span",{className:"text-xs font-semibold text-blue-700 block uppercase",children:"Com Meta Pixel"}),(0,t.jsx)("span",{className:"text-2xl font-extrabold text-blue-800",children:m}),(0,t.jsx)("span",{className:"text-[10px] text-blue-600 block mt-1",children:"Investe em Tráfego Pago"})]}),(0,t.jsxs)("div",{className:"p-4 rounded-xl bg-purple-50 border border-purple-200",children:[(0,t.jsx)("span",{className:"text-xs font-semibold text-purple-700 block uppercase",children:"Score Médio"}),(0,t.jsxs)("span",{className:"text-2xl font-extrabold text-purple-800",children:[b," pts"]}),(0,t.jsx)("span",{className:"text-[10px] text-purple-600 block mt-1",children:"Qualificação Gemini IA"})]})]}),(0,t.jsxs)("div",{className:"mb-6",children:[(0,t.jsxs)("h3",{className:"font-bold text-sm text-slate-900 uppercase tracking-wider mb-2 flex items-center gap-2",children:[(0,t.jsx)(d,{size:16,className:"text-purple-700"}),(0,t.jsx)("span",{children:"Distribuição do Funil de Conversão Comercial"})]}),(0,t.jsxs)("table",{className:"w-full text-xs text-left border-collapse border border-slate-200",children:[(0,t.jsx)("thead",{children:(0,t.jsxs)("tr",{className:"bg-slate-100 border-b border-slate-300 text-slate-800 font-bold",children:[(0,t.jsx)("th",{className:"p-2.5 border-r border-slate-200",children:"Estágio do Funil"}),(0,t.jsx)("th",{className:"p-2.5 border-r border-slate-200 text-center",children:"Quantidade de Leads"}),(0,t.jsx)("th",{className:"p-2.5 border-r border-slate-200 text-center",children:"% da Base Total"}),(0,t.jsx)("th",{className:"p-2.5",children:"Próxima Ação Recomendada"})]})}),(0,t.jsx)("tbody",{children:[{id:"novo",name:"1. Novo Lead",desc:"Aguardando disparo da abordagem inicial"},{id:"abordado",name:"2. Abordado",desc:"Mensagem enviada no WhatsApp"},{id:"respondeu",name:"3. Respondeu",desc:"Em diálogo comercial com Agente IA"},{id:"qualificado",name:"4. Qualificado",desc:"Demonstrou interesse e fit comercial"},{id:"demo_agendada",name:"5. Demo Agendada",desc:"Reunião de apresentação marcada"},{id:"proposta_enviada",name:"6. Proposta Enviada",desc:"Em negociação de contrato"},{id:"fechado",name:"7. Fechado (Won)",desc:"Cliente convertido com sucesso"},{id:"perdido",name:"8. Perdido (Lost)",desc:"Lead descartado ou opt-out"}].map(e=>{let r=h[e.id]||0,a=x>0?Math.round(r/x*100):0;return(0,t.jsxs)("tr",{className:"border-b border-slate-200 hover:bg-slate-50",children:[(0,t.jsx)("td",{className:"p-2 font-bold text-slate-900 border-r border-slate-200",children:e.name}),(0,t.jsx)("td",{className:"p-2 text-center font-extrabold text-slate-900 border-r border-slate-200",children:r}),(0,t.jsxs)("td",{className:"p-2 text-center font-semibold text-slate-600 border-r border-slate-200",children:[a,"%"]}),(0,t.jsx)("td",{className:"p-2 text-slate-600",children:e.desc})]},e.id)})})]})]}),(0,t.jsxs)("div",{children:[(0,t.jsxs)("h3",{className:"font-bold text-sm text-slate-900 uppercase tracking-wider mb-2 flex items-center gap-2",children:[(0,t.jsx)(l.Building2,{size:16,className:"text-purple-700"}),(0,t.jsxs)("span",{children:["Listagem Detalhada de Clínicas & Empresas (",x,")"]})]}),(0,t.jsxs)("table",{className:"w-full text-xs text-left border-collapse border border-slate-200",children:[(0,t.jsx)("thead",{children:(0,t.jsxs)("tr",{className:"bg-slate-100 border-b border-slate-300 text-slate-800 font-bold",children:[(0,t.jsx)("th",{className:"p-2 border-r border-slate-200",children:"Empresa / Clínica"}),(0,t.jsx)("th",{className:"p-2 border-r border-slate-200",children:"Cidade"}),(0,t.jsx)("th",{className:"p-2 border-r border-slate-200",children:"WhatsApp"}),(0,t.jsx)("th",{className:"p-2 border-r border-slate-200 text-center",children:"Score"}),(0,t.jsx)("th",{className:"p-2 text-center",children:"Estágio Atual"})]})}),(0,t.jsx)("tbody",{children:e.map((e,r)=>{let a=e.nome_clinica||e.nomeEmpresa||"Empresa sem nome",s=e.cidade||"Não informada",o=e.whatsapp||"Sem telefone",l=e.scoreOportunidade??e.lead_score??0,d=e.status||"novo";return(0,t.jsxs)("tr",{className:"border-b border-slate-200 hover:bg-slate-50",children:[(0,t.jsx)("td",{className:"p-2 font-bold text-slate-900 border-r border-slate-200",children:a}),(0,t.jsx)("td",{className:"p-2 text-slate-700 border-r border-slate-200",children:s}),(0,t.jsx)("td",{className:"p-2 text-slate-700 border-r border-slate-200 font-mono text-[11px]",children:o}),(0,t.jsxs)("td",{className:"p-2 text-center border-r border-slate-200 font-bold text-purple-700",children:[l," pts"]}),(0,t.jsx)("td",{className:"p-2 text-center",children:(0,t.jsx)("span",{className:"px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 text-slate-800 uppercase border border-slate-300",children:d})})]},e.id||r)})})]})]}),(0,t.jsxs)("div",{className:"mt-8 pt-4 border-t border-slate-300 flex items-center justify-between text-[10px] text-slate-500",children:[(0,t.jsx)("p",{children:"ProspectorAI • Inteligência Comercial B2B"}),(0,t.jsxs)("p",{children:["Documento gerado automaticamente pelo sistema em ",new Date().toLocaleDateString("pt-BR")]})]})]})]})})]})}],63142)},34539,e=>{"use strict";var t=e.i(43476),r=e.i(71645);let a=(0,e.i(56420).default)("file-down",[["path",{d:"M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z",key:"1oefj6"}],["path",{d:"M14 2v5a1 1 0 0 0 1 1h5",key:"wfsgrz"}],["path",{d:"M12 18v-6",key:"17g6i2"}],["path",{d:"m9 15 3 3 3-3",key:"1npd3o"}]]);var s=e.i(16327),o=e.i(67259),l=e.i(26091);e.s(["ExportPdfButton",0,function({label:e="Exportar Relatório PDF",variant:d="primary",defaultOrientation:i="landscape"}){let[n,c]=(0,r.useState)(!1),x=e=>{c(!1);let t="dynamic-print-orientation-style",r=document.getElementById(t);r||((r=document.createElement("style")).id=t,document.head.appendChild(r)),r.innerHTML=`
+      @media print {
+        @page {
+          size: A4 ${e} !important;
+          margin: ${"landscape"===e?"0.6cm":"1cm"} !important;
+        }
+      }
+    `,setTimeout(()=>{window.print()},150)},p={primary:"bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white border border-purple-400/30",secondary:"bg-emerald-600 hover:bg-emerald-500 text-white border border-emerald-400/30",outline:"bg-black/40 hover:bg-white/10 text-gray-200 border border-white/20"};return(0,t.jsxs)("div",{className:"relative inline-block text-left no-print",children:[(0,t.jsxs)("div",{className:"flex items-center rounded-xl overflow-hidden shadow-lg border border-white/20",children:[(0,t.jsxs)("button",{onClick:()=>x(i),type:"button",className:`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition shadow-lg cursor-pointer ${p[d]} rounded-r-none border-r-0`,title:`Exportar em PDF Modo ${"landscape"===i?"Paisagem":"Retrato"}`,children:[(0,t.jsx)(a,{size:16}),(0,t.jsx)("span",{children:e})]}),(0,t.jsx)("button",{onClick:()=>c(!n),type:"button",className:`${p[d]} px-2.5 py-2 rounded-l-none border-l border-white/20`,title:"Opções de Orientação da Página (Paisagem / Retrato)",children:(0,t.jsx)(s.ChevronDown,{size:14,className:`transition-transform duration-200 ${n?"rotate-180":""}`})})]}),n&&(0,t.jsxs)("div",{className:"absolute right-0 mt-2 w-56 rounded-xl bg-slate-900 border border-white/15 shadow-2xl z-50 p-1.5 space-y-1 backdrop-blur-xl",children:[(0,t.jsx)("div",{className:"px-3 py-1.5 text-[10px] uppercase font-bold text-gray-400 border-b border-white/10",children:"Formato de Impressão PDF"}),(0,t.jsxs)("button",{onClick:()=>x("landscape"),className:"w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-white hover:bg-purple-600/30 hover:text-purple-300 rounded-lg transition text-left",children:[(0,t.jsx)(o.Columns3,{size:16,className:"text-purple-400"}),(0,t.jsxs)("div",{children:[(0,t.jsx)("span",{className:"block font-bold",children:"Modo Paisagem (Horizontal)"}),(0,t.jsx)("span",{className:"text-[10px] text-gray-400 block font-normal",children:"Recomendado p/ Kanban & Tabelas Grandes"})]})]}),(0,t.jsxs)("button",{onClick:()=>x("portrait"),className:"w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-white hover:bg-blue-600/30 hover:text-blue-300 rounded-lg transition text-left",children:[(0,t.jsx)(l.FileText,{size:16,className:"text-blue-400"}),(0,t.jsxs)("div",{children:[(0,t.jsx)("span",{className:"block font-bold",children:"Modo Retrato (Vertical)"}),(0,t.jsx)("span",{className:"text-[10px] text-gray-400 block font-normal",children:"Recomendado p/ Lista de Leads & Dossier"})]})]})]})]})}],34539)}]);
